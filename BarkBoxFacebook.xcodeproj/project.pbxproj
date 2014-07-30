@@ -16,14 +16,14 @@
 		3BBDE394198928B700D7C9F0 /* TMTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE393198928B700D7C9F0 /* TMTAppDelegate.m */; };
 		3BBDE397198928B700D7C9F0 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BBDE395198928B700D7C9F0 /* Main_iPhone.storyboard */; };
 		3BBDE39A198928B700D7C9F0 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BBDE398198928B700D7C9F0 /* Main_iPad.storyboard */; };
-		3BBDE39D198928B700D7C9F0 /* TMTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE39C198928B700D7C9F0 /* TMTViewController.m */; };
+		3BBDE39D198928B700D7C9F0 /* TMTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE39C198928B700D7C9F0 /* TMTLoginViewController.m */; };
 		3BBDE39F198928B700D7C9F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BBDE39E198928B700D7C9F0 /* Images.xcassets */; };
 		3BBDE3A6198928B700D7C9F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDE3A5198928B700D7C9F0 /* XCTest.framework */; };
 		3BBDE3A7198928B700D7C9F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDE383198928B600D7C9F0 /* Foundation.framework */; };
 		3BBDE3A8198928B700D7C9F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDE387198928B600D7C9F0 /* UIKit.framework */; };
 		3BBDE3B0198928B700D7C9F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BBDE3AE198928B700D7C9F0 /* InfoPlist.strings */; };
 		3BBDE3B2198928B700D7C9F0 /* BarkBoxFacebookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE3B1198928B700D7C9F0 /* BarkBoxFacebookTests.m */; };
-		3BBDE3BC19892C6F00D7C9F0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDE3BB19892C6F00D7C9F0 /* FacebookSDK.framework */; };
+		3BBDE3BF19892DC700D7C9F0 /* TMTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE3BE19892DC700D7C9F0 /* TMTConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,15 +49,16 @@
 		3BBDE393198928B700D7C9F0 /* TMTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMTAppDelegate.m; sourceTree = "<group>"; };
 		3BBDE396198928B700D7C9F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		3BBDE399198928B700D7C9F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		3BBDE39B198928B700D7C9F0 /* TMTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMTViewController.h; sourceTree = "<group>"; };
-		3BBDE39C198928B700D7C9F0 /* TMTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMTViewController.m; sourceTree = "<group>"; };
+		3BBDE39B198928B700D7C9F0 /* TMTLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMTLoginViewController.h; sourceTree = "<group>"; };
+		3BBDE39C198928B700D7C9F0 /* TMTLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMTLoginViewController.m; sourceTree = "<group>"; };
 		3BBDE39E198928B700D7C9F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3BBDE3A4198928B700D7C9F0 /* BarkBoxFacebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarkBoxFacebookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBDE3A5198928B700D7C9F0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3BBDE3AD198928B700D7C9F0 /* BarkBoxFacebookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BarkBoxFacebookTests-Info.plist"; sourceTree = "<group>"; };
 		3BBDE3AF198928B700D7C9F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3BBDE3B1198928B700D7C9F0 /* BarkBoxFacebookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarkBoxFacebookTests.m; sourceTree = "<group>"; };
-		3BBDE3BB19892C6F00D7C9F0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../FacbookDemos/facebook-ios-sdk/FacebookSDK/FacebookSDK.framework"; sourceTree = "<group>"; };
+		3BBDE3BD19892DC700D7C9F0 /* TMTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTConstants.h; sourceTree = "<group>"; };
+		3BBDE3BE19892DC700D7C9F0 /* TMTConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTConstants.m; sourceTree = "<group>"; };
 		87B3BE3FD97B4E74BA856391 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68EAC80440542299098A9A5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BBDE3BC19892C6F00D7C9F0 /* FacebookSDK.framework in Frameworks */,
 				3BBDE386198928B600D7C9F0 /* CoreGraphics.framework in Frameworks */,
 				3BBDE388198928B600D7C9F0 /* UIKit.framework in Frameworks */,
 				3BBDE384198928B600D7C9F0 /* Foundation.framework in Frameworks */,
@@ -111,7 +111,6 @@
 		3BBDE382198928B600D7C9F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3BBDE3BB19892C6F00D7C9F0 /* FacebookSDK.framework */,
 				3BBDE383198928B600D7C9F0 /* Foundation.framework */,
 				3BBDE385198928B600D7C9F0 /* CoreGraphics.framework */,
 				3BBDE387198928B600D7C9F0 /* UIKit.framework */,
@@ -126,10 +125,12 @@
 			children = (
 				3BBDE392198928B700D7C9F0 /* TMTAppDelegate.h */,
 				3BBDE393198928B700D7C9F0 /* TMTAppDelegate.m */,
+				3BBDE3BD19892DC700D7C9F0 /* TMTConstants.h */,
+				3BBDE3BE19892DC700D7C9F0 /* TMTConstants.m */,
 				3BBDE395198928B700D7C9F0 /* Main_iPhone.storyboard */,
 				3BBDE398198928B700D7C9F0 /* Main_iPad.storyboard */,
-				3BBDE39B198928B700D7C9F0 /* TMTViewController.h */,
-				3BBDE39C198928B700D7C9F0 /* TMTViewController.m */,
+				3BBDE39B198928B700D7C9F0 /* TMTLoginViewController.h */,
+				3BBDE39C198928B700D7C9F0 /* TMTLoginViewController.m */,
 				3BBDE39E198928B700D7C9F0 /* Images.xcassets */,
 				3BBDE38A198928B600D7C9F0 /* Supporting Files */,
 			);
@@ -299,9 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BBDE39D198928B700D7C9F0 /* TMTViewController.m in Sources */,
+				3BBDE39D198928B700D7C9F0 /* TMTLoginViewController.m in Sources */,
 				3BBDE394198928B700D7C9F0 /* TMTAppDelegate.m in Sources */,
 				3BBDE390198928B700D7C9F0 /* main.m in Sources */,
+				3BBDE3BF19892DC700D7C9F0 /* TMTConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
