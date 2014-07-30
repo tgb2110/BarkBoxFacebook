@@ -146,7 +146,117 @@
     
 }
 
+- (void)postNotUsingNativeFacbookApp {
+    // Put together the dialog parameters
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                   @"Sharing Tutorial", @"name",
+                                   @"Build great social apps and get more installs.", @"caption",
+                                   @"Allow your users to share stories on Facebook from your app using the iOS SDK.", @"description",
+                                   @"https://developers.facebook.com/docs/ios/share/", @"link",
+                                   @"http://i.imgur.com/g3Qc1HN.png", @"picture",
+                                   nil];
+    
+    // Show the feed dialog
+    [FBWebDialogs presentFeedDialogModallyWithSession:nil
+                                           parameters:params
+                                              handler:^(FBWebDialogResult result, NSURL *resultURL, NSError *error) {
+                                                  
+                                                  
+                                                  
+                                                  if (error) {
+                                                      // An error occurred, we need to handle the error
+                                                      // See: https://developers.facebook.com/docs/ios/errors
+                                                      NSLog(@"Error publishing story: %@", error.description);
+                                                  } else {
+                                                      if (result == FBWebDialogResultDialogNotCompleted) {
+                                                          // User cancelled.
+                                                          NSLog(@"User cancelled.");
+                                                      } else {
+                                                          // Handle the publish feed callback
+                                                          NSDictionary *urlParams = [self parseURLParams:[resultURL query]];
+                                                          
+                                                          if (![urlParams valueForKey:@"post_id"]) {
+                                                              // User cancelled.
+                                                              NSLog(@"User cancelled.");
+                                                              
+                                                          } else {
+                                                              __block NSInteger currentDonationAmount =  [self.currentUser[@"DonationCounter"] integerValue];
+                                                              currentDonationAmount ++;
+                                                              self.currentUser[@"DonationCounter"] = [NSNumber numberWithInt:currentDonationAmount];
+                                                              [self.currentUser saveInBackground];
+                                                              NSString *result = [NSString stringWithFormat: @"Posted story, id: %@", [urlParams valueForKey:@"post_id"]];
+                                                              NSLog(@"result %@", result);
+                                                          }
+                                                      }
+                                                  }
+                                              }];
+}
+
+- (void)postUsingNativeFacebookApp:(FBLinkShareParams *)params {
+    [FBDialogs presentShareDialogWithLink:params.link
+                                  handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
+                                      
+                                      // increment counter and push back up to parse
+                                      
+                                      if(error) {
+                                          // An error occurred, we need to handle the error
+                                          // See: https://developers.facebook.com/docs/ios/errors
+                                          NSLog(@"Error publishing story: %@", error.description);
+                                      } else {
+                                          __block NSInteger currentDonationAmount =  [self.currentUser[@"DonationCounter"] integerValue];
+                                          currentDonationAmount ++;
+                                          self.currentUser[@"DonationCounter"] = [NSNumber numberWithInt:currentDonationAmount];
+                                          [self.currentUser saveInBackground];
+                                          NSLog(@"result %@", results);
+                                      }
+                                  }];
+}
+
 - (IBAction)postComment:(id)sender {
     
+    //run this on a background thread
+    NSOperationQueue *newQueue = [[NSOperationQueue alloc]init];
+    [newQueue addOperationWithBlock:^{
+        [self retrieveCurrentUserWithCompletion:^(BOOL success) {
+        
+            if (success) {
+                // in the completion block if it is good then run ...
+                
+                
+                FBLinkShareParams *params = [[FBLinkShareParams alloc] init];
+                params.link = [NSURL URLWithString:@"https://developers.facebook.com/docs/ios/share/"];
+                
+                // If the Facebook app is installed and we can present the share dialog
+                if ([FBDialogs canPresentShareDialogWithParams:params]) {
+                    [self performSelectorOnMainThread:@selector(postUsingNativeFacebookApp:) withObject:nil waitUntilDone:YES];
+                } else {
+                    [self performSelectorOnMainThread:@selector(postNotUsingNativeFacbookApp) withObject:nil waitUntilDone:YES];
+                }
+            }
+        }];
+    }];
+    
+    }
+
+
+// A function for parsing URL parameters returned by the Feed Dialog.
+- (NSDictionary*)parseURLParams:(NSString *)query {
+    NSArray *pairs = [query componentsSeparatedByString:@"&"];
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    for (NSString *pair in pairs) {
+        NSArray *kv = [pair componentsSeparatedByString:@"="];
+        NSString *val =
+        [kv[1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        params[kv[0]] = val;
+    }
+    return params;
 }
+
+-(void)retrieveCurrentUserWithCompletion:(void (^)(BOOL))retrieveUser {
+    PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+    PFUser *currentUser = [PFUser currentUser];
+    self.currentUser = [query getObjectWithId:currentUser.objectId];
+    retrieveUser(YES);
+}
+
 @end

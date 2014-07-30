@@ -12,4 +12,6 @@
 
 @interface TMTLoginViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
+@property (strong, nonatomic) PFObject *currentUser;
+
 @end
