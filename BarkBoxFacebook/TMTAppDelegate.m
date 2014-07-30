@@ -7,20 +7,15 @@
 //
 
 #import "TMTAppDelegate.h"
+#import "TMTConstants.h"
 
 @implementation TMTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Facebook Keys
-    
-    // App ID: 1466139390305563
-    // App Secret : 7bd7d402aed372501272a10cf2b7a837
-    
-    // PARSE KEYS
-    
-    // App ID: GnWw9QtihGew6gtLT5JvFPCDv2lKn9o1KOawqCkK
-    // Client Key: JlbVzOEbwOOSmp6A3epUwkpo3YzKNOgYBhZD43ad
+    [Parse setApplicationId:PARSE_APP_ID
+                  clientKey:PARSE_CLIENT_KEY];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     // Override point for customization after application launch.
     return YES;
