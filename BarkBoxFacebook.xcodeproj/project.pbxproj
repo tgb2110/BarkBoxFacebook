@@ -24,6 +24,7 @@
 		3BBDE3B0198928B700D7C9F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BBDE3AE198928B700D7C9F0 /* InfoPlist.strings */; };
 		3BBDE3B2198928B700D7C9F0 /* BarkBoxFacebookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE3B1198928B700D7C9F0 /* BarkBoxFacebookTests.m */; };
 		3BBDE3BF19892DC700D7C9F0 /* TMTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE3BE19892DC700D7C9F0 /* TMTConstants.m */; };
+		3BBDE3C2198A7FA600D7C9F0 /* TMT_API_Calls.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE3C1198A7FA600D7C9F0 /* TMT_API_Calls.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		3BBDE3B1198928B700D7C9F0 /* BarkBoxFacebookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarkBoxFacebookTests.m; sourceTree = "<group>"; };
 		3BBDE3BD19892DC700D7C9F0 /* TMTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTConstants.h; sourceTree = "<group>"; };
 		3BBDE3BE19892DC700D7C9F0 /* TMTConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTConstants.m; sourceTree = "<group>"; };
+		3BBDE3C0198A7FA600D7C9F0 /* TMT_API_Calls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMT_API_Calls.h; sourceTree = "<group>"; };
+		3BBDE3C1198A7FA600D7C9F0 /* TMT_API_Calls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMT_API_Calls.m; sourceTree = "<group>"; };
 		87B3BE3FD97B4E74BA856391 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68EAC80440542299098A9A5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +134,8 @@
 				3BBDE398198928B700D7C9F0 /* Main_iPad.storyboard */,
 				3BBDE39B198928B700D7C9F0 /* TMTLoginViewController.h */,
 				3BBDE39C198928B700D7C9F0 /* TMTLoginViewController.m */,
+				3BBDE3C0198A7FA600D7C9F0 /* TMT_API_Calls.h */,
+				3BBDE3C1198A7FA600D7C9F0 /* TMT_API_Calls.m */,
 				3BBDE39E198928B700D7C9F0 /* Images.xcassets */,
 				3BBDE38A198928B600D7C9F0 /* Supporting Files */,
 			);
@@ -304,6 +309,7 @@
 				3BBDE394198928B700D7C9F0 /* TMTAppDelegate.m in Sources */,
 				3BBDE390198928B700D7C9F0 /* main.m in Sources */,
 				3BBDE3BF19892DC700D7C9F0 /* TMTConstants.m in Sources */,
+				3BBDE3C2198A7FA600D7C9F0 /* TMT_API_Calls.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
