@@ -8,6 +8,7 @@
 
 #import "TMTDetailDogViewController.h"
 #import "TMT_API_Calls.h"
+#import "DogsHardcoded.h"
 
 @interface TMTDetailDogViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *dogImage;
@@ -75,13 +76,14 @@
 
 - (IBAction)postToFB:(id)sender {
         //run this on a background thread
+    DogsHardcoded *dataStore = [DogsHardcoded sharedManager];
         NSOperationQueue *newQueue = [[NSOperationQueue alloc]init];
         [newQueue addOperationWithBlock:^{
             // retrieve current user from parse
-            [TMT_API_Calls retrieveCurrentUserWithUserObject:self.currentUser WithCompletion:^(BOOL success) {
+            [TMT_API_Calls retrieveCurrentUserWithUserObject:dataStore.currentUser WithCompletion:^(BOOL success) {
                 if (success) {
                     // present share dialog box to user
-                    [self performSelectorOnMainThread:@selector(postNotUsingNativeFacebookAppWithUserObject:) withObject:self.currentUser waitUntilDone:YES];
+                    [self performSelectorOnMainThread:@selector(postNotUsingNativeFacebookAppWithUserObject:) withObject:dataStore.currentUser waitUntilDone:YES];
                 }
             }];
         }];
@@ -94,16 +96,14 @@
                                    self.dog.age, @"caption",
                                    self.dog.bio, @"description",
                                    @"https://developers.facebook.com/docs/ios/share/", @"link",
-                                   @"http://leapdogtraining.com/images/1.jpg", @"picture",
+                                   self.dog.imageURL, @"picture",
                                    nil];
     
     // Show the feed dialog
     [FBWebDialogs presentFeedDialogModallyWithSession:nil
                                            parameters:params
                                               handler:^(FBWebDialogResult result, NSURL *resultURL, NSError *error) {
-                                                  
-                                                  
-                                                  
+
                                                   if (error) {
                                                       // An error occurred, we need to handle the error
                                                       // See: https://developers.facebook.com/docs/ios/errors

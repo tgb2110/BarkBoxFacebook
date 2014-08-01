@@ -23,16 +23,6 @@
 		3B23F471198BFA1300252CB0 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F45E198BFA1300252CB0 /* 7.jpg */; };
 		3B23F472198BFA1300252CB0 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F45F198BFA1300252CB0 /* 8.jpg */; };
 		3B23F473198BFA1300252CB0 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F460198BFA1300252CB0 /* 9.jpg */; };
-		3B23F474198BFA1300252CB0 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F461198BFA1300252CB0 /* 10.jpg */; };
-		3B23F475198BFA1300252CB0 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F462198BFA1300252CB0 /* 11.jpg */; };
-		3B23F476198BFA1300252CB0 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F463198BFA1300252CB0 /* 12.jpg */; };
-		3B23F477198BFA1300252CB0 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F464198BFA1300252CB0 /* 13.jpg */; };
-		3B23F478198BFA1300252CB0 /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F465198BFA1300252CB0 /* 14.jpg */; };
-		3B23F479198BFA1300252CB0 /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F466198BFA1300252CB0 /* 15.jpg */; };
-		3B23F47A198BFA1300252CB0 /* 16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F467198BFA1300252CB0 /* 16.jpg */; };
-		3B23F47B198BFA1300252CB0 /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F468198BFA1300252CB0 /* 17.jpg */; };
-		3B23F47C198BFA1300252CB0 /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F469198BFA1300252CB0 /* 18.jpg */; };
-		3B23F47D198BFA1300252CB0 /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F46A198BFA1300252CB0 /* 19.jpg */; };
 		3BBDE384198928B600D7C9F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDE383198928B600D7C9F0 /* Foundation.framework */; };
 		3BBDE386198928B600D7C9F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDE385198928B600D7C9F0 /* CoreGraphics.framework */; };
 		3BBDE388198928B600D7C9F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDE387198928B600D7C9F0 /* UIKit.framework */; };
@@ -82,16 +72,6 @@
 		3B23F45E198BFA1300252CB0 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
 		3B23F45F198BFA1300252CB0 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		3B23F460198BFA1300252CB0 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
-		3B23F461198BFA1300252CB0 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
-		3B23F462198BFA1300252CB0 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
-		3B23F463198BFA1300252CB0 /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
-		3B23F464198BFA1300252CB0 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
-		3B23F465198BFA1300252CB0 /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
-		3B23F466198BFA1300252CB0 /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
-		3B23F467198BFA1300252CB0 /* 16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.jpg; sourceTree = "<group>"; };
-		3B23F468198BFA1300252CB0 /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
-		3B23F469198BFA1300252CB0 /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
-		3B23F46A198BFA1300252CB0 /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
 		3BBDE380198928B600D7C9F0 /* BarkBoxFacebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarkBoxFacebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBDE383198928B600D7C9F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3BBDE385198928B600D7C9F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -171,16 +151,6 @@
 				3B23F45E198BFA1300252CB0 /* 7.jpg */,
 				3B23F45F198BFA1300252CB0 /* 8.jpg */,
 				3B23F460198BFA1300252CB0 /* 9.jpg */,
-				3B23F461198BFA1300252CB0 /* 10.jpg */,
-				3B23F462198BFA1300252CB0 /* 11.jpg */,
-				3B23F463198BFA1300252CB0 /* 12.jpg */,
-				3B23F464198BFA1300252CB0 /* 13.jpg */,
-				3B23F465198BFA1300252CB0 /* 14.jpg */,
-				3B23F466198BFA1300252CB0 /* 15.jpg */,
-				3B23F467198BFA1300252CB0 /* 16.jpg */,
-				3B23F468198BFA1300252CB0 /* 17.jpg */,
-				3B23F469198BFA1300252CB0 /* 18.jpg */,
-				3B23F46A198BFA1300252CB0 /* 19.jpg */,
 			);
 			name = GraduateDogImages;
 			sourceTree = "<group>";
@@ -232,11 +202,11 @@
 				3BC893F7198C09960094D3C3 /* DogsHardcoded.h */,
 				3BC893F8198C09960094D3C3 /* DogsHardcoded.m */,
 				3B23F44B198BDB0400252CB0 /* TMTSharePupCollectionViewCell.h */,
+				3B23F44C198BDB0400252CB0 /* TMTSharePupCollectionViewCell.m */,
 				3B23F453198BF5C400252CB0 /* TMTSharePupViewController.h */,
 				3B23F454198BF5C400252CB0 /* TMTSharePupViewController.m */,
 				3BC893F4198BFC980094D3C3 /* TMTDetailDogViewController.h */,
 				3BC893F5198BFC980094D3C3 /* TMTDetailDogViewController.m */,
-				3B23F44C198BDB0400252CB0 /* TMTSharePupCollectionViewCell.m */,
 				3BBDE39B198928B700D7C9F0 /* TMTLoginViewController.h */,
 				3BBDE39C198928B700D7C9F0 /* TMTLoginViewController.m */,
 				3BBDE3C0198A7FA600D7C9F0 /* TMT_API_Calls.h */,
@@ -356,24 +326,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B23F47A198BFA1300252CB0 /* 16.jpg in Resources */,
-				3B23F478198BFA1300252CB0 /* 14.jpg in Resources */,
-				3B23F475198BFA1300252CB0 /* 11.jpg in Resources */,
 				3B23F473198BFA1300252CB0 /* 9.jpg in Resources */,
 				3B23F472198BFA1300252CB0 /* 8.jpg in Resources */,
 				3B23F471198BFA1300252CB0 /* 7.jpg in Resources */,
 				3B23F46E198BFA1300252CB0 /* 4.jpg in Resources */,
-				3B23F479198BFA1300252CB0 /* 15.jpg in Resources */,
-				3B23F477198BFA1300252CB0 /* 13.jpg in Resources */,
 				3B23F46C198BFA1300252CB0 /* 2.jpg in Resources */,
 				3BBDE39F198928B700D7C9F0 /* Images.xcassets in Resources */,
-				3B23F47D198BFA1300252CB0 /* 19.jpg in Resources */,
 				3B23F46F198BFA1300252CB0 /* 5.jpg in Resources */,
-				3B23F47C198BFA1300252CB0 /* 18.jpg in Resources */,
-				3B23F476198BFA1300252CB0 /* 12.jpg in Resources */,
 				3B23F470198BFA1300252CB0 /* 6.jpg in Resources */,
-				3B23F474198BFA1300252CB0 /* 10.jpg in Resources */,
-				3B23F47B198BFA1300252CB0 /* 17.jpg in Resources */,
 				3BBDE397198928B700D7C9F0 /* Main_iPhone.storyboard in Resources */,
 				3B23F444198BD4B100252CB0 /* dogPlaceholder.png in Resources */,
 				3BBDE38E198928B600D7C9F0 /* InfoPlist.strings in Resources */,

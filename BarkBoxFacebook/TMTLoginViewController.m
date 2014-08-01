@@ -8,6 +8,7 @@
 
 #import "TMTLoginViewController.h"
 #import "TMT_API_Calls.h"
+#import "DogsHardcoded.h"
 
 @interface TMTLoginViewController ()
 
@@ -50,6 +51,8 @@
 
 - (void)checkForLoggedInUser
 {
+    DogsHardcoded *dataStore = [DogsHardcoded sharedManager];
+    
     if (![PFUser currentUser]) {
         
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
@@ -65,6 +68,7 @@
         [self presentViewController:logInViewController animated:YES completion:NULL];
     } else {
         self.currentUser = [PFUser currentUser];
+        dataStore.currentUser = self.currentUser;
     }
 }
 
@@ -86,7 +90,10 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
 {
+    DogsHardcoded *dataStore = [DogsHardcoded sharedManager];
+    dataStore.currentUser = user;
     self.currentUser = user;
+    
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

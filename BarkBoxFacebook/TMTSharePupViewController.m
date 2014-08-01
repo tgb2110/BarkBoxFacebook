@@ -10,6 +10,7 @@
 #import "TMTSharePupCollectionViewCell.h"
 #import "TMTDetailDogViewController.h"
 #import "TMTDog.h"
+#import "DogsHardcoded.h"
 
 @interface TMTSharePupViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -23,16 +24,18 @@
 {
     [super viewDidLoad];
     
+    DogsHardcoded *dogsToLoad = [DogsHardcoded new];
     self.dogCollectionView.dataSource = self;
     self.dogCollectionView.delegate = self;
-    self.dogs = [NSMutableArray new];
+    self.dogs = dogsToLoad.dogs;
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    for (NSInteger i = 1; i < 19; i ++) {
-        TMTDog *dog = [TMTDog new];
-        dog.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", i]];
-        [self.dogs addObject:dog];
-    }
+    
+//    for (NSInteger i = 1; i < 19; i ++) {
+//        TMTDog *dog = [TMTDog new];
+//        dog.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", i]];
+//        [self.dogs addObject:dog];
+//    }
     
 }
 
