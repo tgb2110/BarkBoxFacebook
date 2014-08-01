@@ -19,6 +19,6 @@
 @property (strong, nonatomic) NSString *imageURL;
 
 - (instancetype)init;
--(instancetype)initWithName:(NSString *)initName WithBreed:(NSString *)initBreed WithAge:(NSString *)initAge WithDistance:(NSString *)initDistance WithBio:(NSString *)initBio WithDogImage:(UIImage *)dogImage;
+- (instancetype)initWithName:(NSString *)initName WithBreed:(NSString *)initBreed WithAge:(NSString *)initAge WithDistance:(NSString *)initDistance WithBio:(NSString *)initBio WithDogImage:(UIImage *)dogImage;
 
 @end

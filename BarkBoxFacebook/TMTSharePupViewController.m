@@ -13,14 +13,13 @@
 
 @interface TMTSharePupViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-@property(nonatomic, weak) IBOutlet UICollectionView *dogCollectionView;
+@property (nonatomic, weak) IBOutlet UICollectionView *dogCollectionView;
 
 @end
 
 @implementation TMTSharePupViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     self.dataStore = [DogsDataStore sharedDataStore];
@@ -28,37 +27,27 @@
     self.dogCollectionView.dataSource = self;
     self.dogCollectionView.delegate = self;
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
-//    for (NSInteger i = 1; i < 19; i ++) {
-//        TMTDog *dog = [TMTDog new];
-//        dog.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", i]];
-//        [self.dogs addObject:dog];
-//    }
-    
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 }
 
-
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - UICollectionView Datasource
-// 1
+
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
     return [self.dataStore.dogs count];
 }
-// 2
-- (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
-//
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     TMTSharePupCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"dogCell" forIndexPath:indexPath];
@@ -66,53 +55,29 @@
     
     TMTDog *dog = self.dataStore.dogs[indexPath.row];
     cell.dogImage.image = dog.image;
-    
     return cell;
 }
 
-// 4
-/*- (UICollectionReusableView *)collectionView:
- (UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
- {
- return [[UICollectionReusableView alloc] init];
- }*/
-
-#pragma mark - UICollectionViewDelegate
-//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    TMTDetailDogViewController *nextVC = [TMTDetailDogViewController new];
-//    nextVC.dog = self.dogs[indexPath.row];
-//    [self.navigationController pushViewController:nextVC animated:YES];
-//}
-//
-//- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    
-//}
-
 #pragma mark – UICollectionViewDelegateFlowLayout
 
-// 1
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    // 2
     CGSize retval = CGSizeMake(80, 80);
     retval.height += 10;
     retval.width += 10;
     return retval;
 }
-// 3
+
 - (UIEdgeInsets)collectionView:
-(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(10, 10, 10, 10);
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     NSIndexPath *ip = [self.dogCollectionView indexPathForCell:sender];
     TMTDog *dog = self.dataStore.dogs[ip.row];;
     TMTDetailDogViewController *nextVC = segue.destinationViewController;
-    
     if ([segue.identifier isEqualToString:@"detailDogSegue"]) {
         nextVC.currentUser = self.dataStore.currentUser;
         nextVC.dog = dog;

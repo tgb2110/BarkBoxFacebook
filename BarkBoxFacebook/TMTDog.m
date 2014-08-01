@@ -10,12 +10,11 @@
 
 @implementation TMTDog
 
-- (instancetype)init
-{
+- (instancetype)init {
     return [self initWithName:@"Jacob" WithBreed:@"Boxer/Greyhound" WithAge:@"5 years young" WithDistance:@"Too Far" WithBio:@"Jacob is simply amazing" WithDogImage:[UIImage imageNamed:@"dogPlaceholder.png"]];
 }
 
--(instancetype)initWithName:(NSString *)initName WithBreed:(NSString *)initBreed WithAge:(NSString *)initAge WithDistance:(NSString *)initDistance WithBio:(NSString *)initBio WithDogImage:(UIImage *)dogImage {
+- (instancetype)initWithName:(NSString *)initName WithBreed:(NSString *)initBreed WithAge:(NSString *)initAge WithDistance:(NSString *)initDistance WithBio:(NSString *)initBio WithDogImage:(UIImage *)dogImage {
     self = [super init];
     if (self) {
         _name = initName;
@@ -27,6 +26,5 @@
     }
     return self;
 }
-
 
 @end

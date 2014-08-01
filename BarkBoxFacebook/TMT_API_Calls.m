@@ -11,14 +11,14 @@
 
 @implementation TMT_API_Calls
 
-+(void)retrieveCurrentUserWithUserObject:(PFObject *)userObject WithCompletion:(void (^)(BOOL))retrieveUser {
++ (void)retrieveCurrentUserWithUserObject:(PFObject *)userObject WithCompletion:(void (^)(BOOL))retrieveUser {
     PFQuery *query = [PFQuery queryWithClassName:@"_User"];
     PFUser *currentUser = [PFUser currentUser];
     userObject = [query getObjectWithId:currentUser.objectId];
     retrieveUser(YES);
 }
 
-+(void)presentFacebookShareWithUserObject:(PFObject *)userObject {
++ (void)presentFacebookShareWithUserObject:(PFObject *)userObject {
     // in the completion block if it is good then run ...
     
     FBLinkShareParams *params = [[FBLinkShareParams alloc] init];
@@ -35,7 +35,7 @@
                                        @"https://developers.facebook.com/docs/ios/share/", @"link",
                                        @"http://i.imgur.com/g3Qc1HN.png", @"picture",
                                        nil];
-        [self performSelectorOnMainThread:@selector(postNotUsingNativeFacebookAppWithUserObject:WithParams:) withObject:@[userObject,params] waitUntilDone:YES];
+        [self performSelectorOnMainThread:@selector(postNotUsingNativeFacebookAppWithUserObject:WithParams:) withObject:@[userObject, params] waitUntilDone:YES];
     }
 }
 
@@ -45,9 +45,6 @@
     [FBWebDialogs presentFeedDialogModallyWithSession:nil
                                            parameters:params
                                               handler:^(FBWebDialogResult result, NSURL *resultURL, NSError *error) {
-                                                  
-                                                  
-                                                  
                                                   if (error) {
                                                       // An error occurred, we need to handle the error
                                                       // See: https://developers.facebook.com/docs/ios/errors
@@ -59,7 +56,6 @@
                                                       } else {
                                                           // Handle the publish feed callback
                                                           NSDictionary *urlParams = [self parseURLParams:[resultURL query]];
-                                                          
                                                           if (![urlParams valueForKey:@"post_id"]) {
                                                               // User cancelled.
                                                               NSLog(@"User cancelled.");
@@ -89,8 +85,7 @@
                                   handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
                                       
                                       // increment counter and push back up to parse
-                                      
-                                      if(error) {
+                                      if (error) {
                                           // An error occurred, we need to handle the error
                                           // See: https://developers.facebook.com/docs/ios/errors
                                           NSLog(@"Error publishing story: %@", error.description);
@@ -107,7 +102,7 @@
 }
 
 // A function for parsing URL parameters returned by the Feed Dialog.
-+ (NSDictionary*)parseURLParams:(NSString *)query {
++ (NSDictionary *)parseURLParams:(NSString *)query {
     NSArray *pairs = [query componentsSeparatedByString:@"&"];
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     for (NSString *pair in pairs) {

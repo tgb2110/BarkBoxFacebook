@@ -12,7 +12,7 @@
 @implementation DogsDataStore
 
 + (instancetype)sharedDataStore {
-    static DogsDataStore *sharedDataStore = nil;
+    static DogsDataStore * sharedDataStore = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedDataStore = [[self alloc] init];
@@ -20,8 +20,7 @@
     return sharedDataStore;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         self.currentUser = [PFUser currentUser];
@@ -30,7 +29,7 @@
     return self;
 }
 
--(void)makeDogs {
+- (void)makeDogs {
     self.dogs = [NSMutableArray new];
     TMTDog *dogOne = [TMTDog new];
     dogOne.image = [UIImage imageNamed:@"1.jpg"];
@@ -114,7 +113,5 @@
     dogNine.imageURL = @"http://leapdogtraining.com/images/9.jpg";
     [self.dogs addObject:dogNine];
 }
-
-
 
 @end

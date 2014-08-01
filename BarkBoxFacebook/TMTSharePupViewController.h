@@ -15,6 +15,4 @@
 
 @property (strong, nonatomic) DogsDataStore *dataStore;
 
-
-
 @end

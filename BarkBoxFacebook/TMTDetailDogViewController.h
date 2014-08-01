@@ -17,7 +17,4 @@
 @property (strong, nonatomic) TMTDog *dog;
 @property (strong, nonatomic) PFObject *currentUser;
 
-//@property (strong, nonatomic) DogsDataStore *dataStore;
-
-
 @end

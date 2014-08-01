@@ -13,8 +13,4 @@
 
 @interface TMTLoginViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
-//@property (strong, nonatomic) PFObject *currentUser;
-
-//@property (strong, nonatomic) DogsDataStore *dataStore;
-
 @end
