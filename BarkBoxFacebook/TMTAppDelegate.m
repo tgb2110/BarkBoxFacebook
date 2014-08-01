@@ -19,6 +19,9 @@
                   clientKey:PARSE_CLIENT_KEY];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    [PFTwitterUtils initializeWithConsumerKey:TWITTER_APP_ID
+                               consumerSecret:TWITTER_SECRET];
+    
     [PFFacebookUtils initializeFacebook];
     return YES;
 }

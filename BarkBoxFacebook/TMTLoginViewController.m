@@ -13,6 +13,10 @@
 
 - (IBAction)logout:(id)sender;
 - (IBAction)postComment:(id)sender;
+- (IBAction)linkTwitter:(id)sender;
+- (IBAction)linkFacebook:(id)sender;
+- (IBAction)unlinkTwitter:(id)sender;
+- (IBAction)unlinkFacebook:(id)sender;
 
 @end
 
@@ -51,7 +55,7 @@
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
         [logInViewController setDelegate:self];
         [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"email", nil]];
-        [logInViewController setFields: PFLogInFieldsFacebook | PFLogInFieldsDismissButton];
+        [logInViewController setFields: PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsDismissButton];
         
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
         [signUpViewController setDelegate:self];
@@ -153,6 +157,48 @@
                 [TMT_API_Calls presentFacebookShareWithUserObject:self.currentUser];
             }
         }];
+    }];
+}
+
+- (IBAction)linkTwitter:(id)sender {
+    
+    PFUser *user = [PFUser currentUser];
+    
+    if (![PFTwitterUtils isLinkedWithUser:user]) {
+        [PFTwitterUtils linkUser:user block:^(BOOL succeeded, NSError *error) {
+            if ([PFTwitterUtils isLinkedWithUser:user]) {
+                NSLog(@"Woohoo, user logged in with Twitter!");
+            }
+        }];
+    }
+}
+
+- (IBAction)linkFacebook:(id)sender {
+    PFUser *user = [PFUser currentUser];
+    if (![PFFacebookUtils isLinkedWithUser:user]) {
+        [PFFacebookUtils linkUser:user permissions:nil block:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                NSLog(@"Woohoo, user logged in with Facebook!");
+            }
+        }];
+    }
+}
+
+- (IBAction)unlinkTwitter:(id)sender {
+    PFUser *user = [PFUser currentUser];
+    [PFTwitterUtils unlinkUserInBackground:user block:^(BOOL succeeded, NSError *error) {
+        if (!error && succeeded) {
+            NSLog(@"The user is no longer associated with their Twitter account.");
+        }
+    }];
+}
+
+- (IBAction)unlinkFacebook:(id)sender {
+    PFUser *user = [PFUser currentUser];
+    [PFFacebookUtils unlinkUserInBackground:user block:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"The user is no longer associated with their Facebook account.");
+        }
     }];
 }
 

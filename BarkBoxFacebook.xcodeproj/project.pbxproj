@@ -8,6 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		36548EA3B6EA49219EC00043 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B3BE3FD97B4E74BA856391 /* libPods.a */; };
+		3B23F436198ADBFD00252CB0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B23F435198ADBFC00252CB0 /* Accounts.framework */; };
+		3B23F438198ADC0300252CB0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B23F437198ADC0300252CB0 /* Social.framework */; };
+		3B23F444198BD4B100252CB0 /* dogPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F443198BD4B100252CB0 /* dogPlaceholder.png */; };
+		3B23F447198BD5D300252CB0 /* TMTDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B23F446198BD5D300252CB0 /* TMTDog.m */; };
+		3B23F44D198BDB0400252CB0 /* TMTSharePupCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B23F44C198BDB0400252CB0 /* TMTSharePupCollectionViewCell.m */; };
+		3B23F455198BF5C400252CB0 /* TMTSharePupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B23F454198BF5C400252CB0 /* TMTSharePupViewController.m */; };
+		3B23F46B198BFA1300252CB0 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F458198BFA1300252CB0 /* 1.jpg */; };
+		3B23F46C198BFA1300252CB0 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F459198BFA1300252CB0 /* 2.jpg */; };
+		3B23F46D198BFA1300252CB0 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F45A198BFA1300252CB0 /* 3.jpg */; };
+		3B23F46E198BFA1300252CB0 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F45B198BFA1300252CB0 /* 4.jpg */; };
+		3B23F46F198BFA1300252CB0 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F45C198BFA1300252CB0 /* 5.jpg */; };
+		3B23F470198BFA1300252CB0 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F45D198BFA1300252CB0 /* 6.jpg */; };
+		3B23F471198BFA1300252CB0 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F45E198BFA1300252CB0 /* 7.jpg */; };
+		3B23F472198BFA1300252CB0 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F45F198BFA1300252CB0 /* 8.jpg */; };
+		3B23F473198BFA1300252CB0 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F460198BFA1300252CB0 /* 9.jpg */; };
+		3B23F474198BFA1300252CB0 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F461198BFA1300252CB0 /* 10.jpg */; };
+		3B23F475198BFA1300252CB0 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F462198BFA1300252CB0 /* 11.jpg */; };
+		3B23F476198BFA1300252CB0 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F463198BFA1300252CB0 /* 12.jpg */; };
+		3B23F477198BFA1300252CB0 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F464198BFA1300252CB0 /* 13.jpg */; };
+		3B23F478198BFA1300252CB0 /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F465198BFA1300252CB0 /* 14.jpg */; };
+		3B23F479198BFA1300252CB0 /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F466198BFA1300252CB0 /* 15.jpg */; };
+		3B23F47A198BFA1300252CB0 /* 16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F467198BFA1300252CB0 /* 16.jpg */; };
+		3B23F47B198BFA1300252CB0 /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F468198BFA1300252CB0 /* 17.jpg */; };
+		3B23F47C198BFA1300252CB0 /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F469198BFA1300252CB0 /* 18.jpg */; };
+		3B23F47D198BFA1300252CB0 /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B23F46A198BFA1300252CB0 /* 19.jpg */; };
 		3BBDE384198928B600D7C9F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDE383198928B600D7C9F0 /* Foundation.framework */; };
 		3BBDE386198928B600D7C9F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDE385198928B600D7C9F0 /* CoreGraphics.framework */; };
 		3BBDE388198928B600D7C9F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDE387198928B600D7C9F0 /* UIKit.framework */; };
@@ -15,7 +40,6 @@
 		3BBDE390198928B700D7C9F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE38F198928B700D7C9F0 /* main.m */; };
 		3BBDE394198928B700D7C9F0 /* TMTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE393198928B700D7C9F0 /* TMTAppDelegate.m */; };
 		3BBDE397198928B700D7C9F0 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BBDE395198928B700D7C9F0 /* Main_iPhone.storyboard */; };
-		3BBDE39A198928B700D7C9F0 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BBDE398198928B700D7C9F0 /* Main_iPad.storyboard */; };
 		3BBDE39D198928B700D7C9F0 /* TMTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE39C198928B700D7C9F0 /* TMTLoginViewController.m */; };
 		3BBDE39F198928B700D7C9F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BBDE39E198928B700D7C9F0 /* Images.xcassets */; };
 		3BBDE3A6198928B700D7C9F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDE3A5198928B700D7C9F0 /* XCTest.framework */; };
@@ -25,6 +49,8 @@
 		3BBDE3B2198928B700D7C9F0 /* BarkBoxFacebookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE3B1198928B700D7C9F0 /* BarkBoxFacebookTests.m */; };
 		3BBDE3BF19892DC700D7C9F0 /* TMTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE3BE19892DC700D7C9F0 /* TMTConstants.m */; };
 		3BBDE3C2198A7FA600D7C9F0 /* TMT_API_Calls.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE3C1198A7FA600D7C9F0 /* TMT_API_Calls.m */; };
+		3BC893F6198BFC980094D3C3 /* TMTDetailDogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC893F5198BFC980094D3C3 /* TMTDetailDogViewController.m */; };
+		3BC893F9198C09960094D3C3 /* DogsHardcoded.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC893F8198C09960094D3C3 /* DogsHardcoded.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +64,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B23F435198ADBFC00252CB0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		3B23F437198ADC0300252CB0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		3B23F443198BD4B100252CB0 /* dogPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dogPlaceholder.png; sourceTree = "<group>"; };
+		3B23F445198BD5D300252CB0 /* TMTDog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTDog.h; sourceTree = "<group>"; };
+		3B23F446198BD5D300252CB0 /* TMTDog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTDog.m; sourceTree = "<group>"; };
+		3B23F44B198BDB0400252CB0 /* TMTSharePupCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTSharePupCollectionViewCell.h; sourceTree = "<group>"; };
+		3B23F44C198BDB0400252CB0 /* TMTSharePupCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTSharePupCollectionViewCell.m; sourceTree = "<group>"; };
+		3B23F453198BF5C400252CB0 /* TMTSharePupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTSharePupViewController.h; sourceTree = "<group>"; };
+		3B23F454198BF5C400252CB0 /* TMTSharePupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTSharePupViewController.m; sourceTree = "<group>"; };
+		3B23F458198BFA1300252CB0 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		3B23F459198BFA1300252CB0 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		3B23F45A198BFA1300252CB0 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		3B23F45B198BFA1300252CB0 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		3B23F45C198BFA1300252CB0 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		3B23F45D198BFA1300252CB0 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		3B23F45E198BFA1300252CB0 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		3B23F45F198BFA1300252CB0 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		3B23F460198BFA1300252CB0 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		3B23F461198BFA1300252CB0 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		3B23F462198BFA1300252CB0 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		3B23F463198BFA1300252CB0 /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		3B23F464198BFA1300252CB0 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
+		3B23F465198BFA1300252CB0 /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
+		3B23F466198BFA1300252CB0 /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
+		3B23F467198BFA1300252CB0 /* 16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.jpg; sourceTree = "<group>"; };
+		3B23F468198BFA1300252CB0 /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
+		3B23F469198BFA1300252CB0 /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
+		3B23F46A198BFA1300252CB0 /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
 		3BBDE380198928B600D7C9F0 /* BarkBoxFacebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarkBoxFacebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBDE383198928B600D7C9F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3BBDE385198928B600D7C9F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -49,7 +103,6 @@
 		3BBDE392198928B700D7C9F0 /* TMTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMTAppDelegate.h; sourceTree = "<group>"; };
 		3BBDE393198928B700D7C9F0 /* TMTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMTAppDelegate.m; sourceTree = "<group>"; };
 		3BBDE396198928B700D7C9F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		3BBDE399198928B700D7C9F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		3BBDE39B198928B700D7C9F0 /* TMTLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMTLoginViewController.h; sourceTree = "<group>"; };
 		3BBDE39C198928B700D7C9F0 /* TMTLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMTLoginViewController.m; sourceTree = "<group>"; };
 		3BBDE39E198928B700D7C9F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -62,6 +115,10 @@
 		3BBDE3BE19892DC700D7C9F0 /* TMTConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTConstants.m; sourceTree = "<group>"; };
 		3BBDE3C0198A7FA600D7C9F0 /* TMT_API_Calls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMT_API_Calls.h; sourceTree = "<group>"; };
 		3BBDE3C1198A7FA600D7C9F0 /* TMT_API_Calls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMT_API_Calls.m; sourceTree = "<group>"; };
+		3BC893F4198BFC980094D3C3 /* TMTDetailDogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTDetailDogViewController.h; sourceTree = "<group>"; };
+		3BC893F5198BFC980094D3C3 /* TMTDetailDogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTDetailDogViewController.m; sourceTree = "<group>"; };
+		3BC893F7198C09960094D3C3 /* DogsHardcoded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogsHardcoded.h; sourceTree = "<group>"; };
+		3BC893F8198C09960094D3C3 /* DogsHardcoded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogsHardcoded.m; sourceTree = "<group>"; };
 		87B3BE3FD97B4E74BA856391 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68EAC80440542299098A9A5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B23F438198ADC0300252CB0 /* Social.framework in Frameworks */,
+				3B23F436198ADBFD00252CB0 /* Accounts.framework in Frameworks */,
 				3BBDE386198928B600D7C9F0 /* CoreGraphics.framework in Frameworks */,
 				3BBDE388198928B600D7C9F0 /* UIKit.framework in Frameworks */,
 				3BBDE384198928B600D7C9F0 /* Foundation.framework in Frameworks */,
@@ -91,6 +150,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B23F456198BF99F00252CB0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3B23F443198BD4B100252CB0 /* dogPlaceholder.png */,
+				3B23F457198BF9A600252CB0 /* GraduateDogImages */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		3B23F457198BF9A600252CB0 /* GraduateDogImages */ = {
+			isa = PBXGroup;
+			children = (
+				3B23F458198BFA1300252CB0 /* 1.jpg */,
+				3B23F459198BFA1300252CB0 /* 2.jpg */,
+				3B23F45A198BFA1300252CB0 /* 3.jpg */,
+				3B23F45B198BFA1300252CB0 /* 4.jpg */,
+				3B23F45C198BFA1300252CB0 /* 5.jpg */,
+				3B23F45D198BFA1300252CB0 /* 6.jpg */,
+				3B23F45E198BFA1300252CB0 /* 7.jpg */,
+				3B23F45F198BFA1300252CB0 /* 8.jpg */,
+				3B23F460198BFA1300252CB0 /* 9.jpg */,
+				3B23F461198BFA1300252CB0 /* 10.jpg */,
+				3B23F462198BFA1300252CB0 /* 11.jpg */,
+				3B23F463198BFA1300252CB0 /* 12.jpg */,
+				3B23F464198BFA1300252CB0 /* 13.jpg */,
+				3B23F465198BFA1300252CB0 /* 14.jpg */,
+				3B23F466198BFA1300252CB0 /* 15.jpg */,
+				3B23F467198BFA1300252CB0 /* 16.jpg */,
+				3B23F468198BFA1300252CB0 /* 17.jpg */,
+				3B23F469198BFA1300252CB0 /* 18.jpg */,
+				3B23F46A198BFA1300252CB0 /* 19.jpg */,
+			);
+			name = GraduateDogImages;
+			sourceTree = "<group>";
+		};
 		3BBDE377198928B600D7C9F0 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +208,8 @@
 		3BBDE382198928B600D7C9F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B23F437198ADC0300252CB0 /* Social.framework */,
+				3B23F435198ADBFC00252CB0 /* Accounts.framework */,
 				3BBDE383198928B600D7C9F0 /* Foundation.framework */,
 				3BBDE385198928B600D7C9F0 /* CoreGraphics.framework */,
 				3BBDE387198928B600D7C9F0 /* UIKit.framework */,
@@ -130,12 +226,22 @@
 				3BBDE393198928B700D7C9F0 /* TMTAppDelegate.m */,
 				3BBDE3BD19892DC700D7C9F0 /* TMTConstants.h */,
 				3BBDE3BE19892DC700D7C9F0 /* TMTConstants.m */,
+				3B23F445198BD5D300252CB0 /* TMTDog.h */,
+				3B23F446198BD5D300252CB0 /* TMTDog.m */,
 				3BBDE395198928B700D7C9F0 /* Main_iPhone.storyboard */,
-				3BBDE398198928B700D7C9F0 /* Main_iPad.storyboard */,
+				3BC893F7198C09960094D3C3 /* DogsHardcoded.h */,
+				3BC893F8198C09960094D3C3 /* DogsHardcoded.m */,
+				3B23F44B198BDB0400252CB0 /* TMTSharePupCollectionViewCell.h */,
+				3B23F453198BF5C400252CB0 /* TMTSharePupViewController.h */,
+				3B23F454198BF5C400252CB0 /* TMTSharePupViewController.m */,
+				3BC893F4198BFC980094D3C3 /* TMTDetailDogViewController.h */,
+				3BC893F5198BFC980094D3C3 /* TMTDetailDogViewController.m */,
+				3B23F44C198BDB0400252CB0 /* TMTSharePupCollectionViewCell.m */,
 				3BBDE39B198928B700D7C9F0 /* TMTLoginViewController.h */,
 				3BBDE39C198928B700D7C9F0 /* TMTLoginViewController.m */,
 				3BBDE3C0198A7FA600D7C9F0 /* TMT_API_Calls.h */,
 				3BBDE3C1198A7FA600D7C9F0 /* TMT_API_Calls.m */,
+				3B23F456198BF99F00252CB0 /* Assets */,
 				3BBDE39E198928B700D7C9F0 /* Images.xcassets */,
 				3BBDE38A198928B600D7C9F0 /* Supporting Files */,
 			);
@@ -250,10 +356,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BBDE39A198928B700D7C9F0 /* Main_iPad.storyboard in Resources */,
+				3B23F47A198BFA1300252CB0 /* 16.jpg in Resources */,
+				3B23F478198BFA1300252CB0 /* 14.jpg in Resources */,
+				3B23F475198BFA1300252CB0 /* 11.jpg in Resources */,
+				3B23F473198BFA1300252CB0 /* 9.jpg in Resources */,
+				3B23F472198BFA1300252CB0 /* 8.jpg in Resources */,
+				3B23F471198BFA1300252CB0 /* 7.jpg in Resources */,
+				3B23F46E198BFA1300252CB0 /* 4.jpg in Resources */,
+				3B23F479198BFA1300252CB0 /* 15.jpg in Resources */,
+				3B23F477198BFA1300252CB0 /* 13.jpg in Resources */,
+				3B23F46C198BFA1300252CB0 /* 2.jpg in Resources */,
 				3BBDE39F198928B700D7C9F0 /* Images.xcassets in Resources */,
+				3B23F47D198BFA1300252CB0 /* 19.jpg in Resources */,
+				3B23F46F198BFA1300252CB0 /* 5.jpg in Resources */,
+				3B23F47C198BFA1300252CB0 /* 18.jpg in Resources */,
+				3B23F476198BFA1300252CB0 /* 12.jpg in Resources */,
+				3B23F470198BFA1300252CB0 /* 6.jpg in Resources */,
+				3B23F474198BFA1300252CB0 /* 10.jpg in Resources */,
+				3B23F47B198BFA1300252CB0 /* 17.jpg in Resources */,
 				3BBDE397198928B700D7C9F0 /* Main_iPhone.storyboard in Resources */,
+				3B23F444198BD4B100252CB0 /* dogPlaceholder.png in Resources */,
 				3BBDE38E198928B600D7C9F0 /* InfoPlist.strings in Resources */,
+				3B23F46D198BFA1300252CB0 /* 3.jpg in Resources */,
+				3B23F46B198BFA1300252CB0 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,8 +431,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BBDE39D198928B700D7C9F0 /* TMTLoginViewController.m in Sources */,
+				3B23F447198BD5D300252CB0 /* TMTDog.m in Sources */,
+				3B23F455198BF5C400252CB0 /* TMTSharePupViewController.m in Sources */,
 				3BBDE394198928B700D7C9F0 /* TMTAppDelegate.m in Sources */,
+				3BC893F6198BFC980094D3C3 /* TMTDetailDogViewController.m in Sources */,
+				3B23F44D198BDB0400252CB0 /* TMTSharePupCollectionViewCell.m in Sources */,
 				3BBDE390198928B700D7C9F0 /* main.m in Sources */,
+				3BC893F9198C09960094D3C3 /* DogsHardcoded.m in Sources */,
 				3BBDE3BF19892DC700D7C9F0 /* TMTConstants.m in Sources */,
 				3BBDE3C2198A7FA600D7C9F0 /* TMT_API_Calls.m in Sources */,
 			);
@@ -346,14 +476,6 @@
 				3BBDE396198928B700D7C9F0 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		3BBDE398198928B700D7C9F0 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3BBDE399198928B700D7C9F0 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		3BBDE3AE198928B700D7C9F0 /* InfoPlist.strings */ = {
