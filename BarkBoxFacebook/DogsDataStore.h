@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
-@interface DogsHardcoded : NSObject
+@interface DogsDataStore : NSObject
 
 @property (strong, nonatomic) NSMutableArray *dogs;
+@property (strong, nonatomic) PFObject *currentUser;
+
++ (instancetype)sharedDataStore;
+
 @end

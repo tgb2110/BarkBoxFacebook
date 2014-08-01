@@ -12,11 +12,11 @@
 @interface TMTLoginViewController ()
 
 - (IBAction)logout:(id)sender;
-- (IBAction)postComment:(id)sender;
-- (IBAction)linkTwitter:(id)sender;
-- (IBAction)linkFacebook:(id)sender;
-- (IBAction)unlinkTwitter:(id)sender;
-- (IBAction)unlinkFacebook:(id)sender;
+//- (IBAction)postComment:(id)sender;
+//- (IBAction)linkTwitter:(id)sender;
+//- (IBAction)linkFacebook:(id)sender;
+//- (IBAction)unlinkTwitter:(id)sender;
+//- (IBAction)unlinkFacebook:(id)sender;
 
 @end
 
@@ -35,6 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //self.dataStore = [DogsDataStore sharedDataStore];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -64,7 +65,7 @@
         
         [self presentViewController:logInViewController animated:YES completion:NULL];
     } else {
-        self.currentUser = [PFUser currentUser];
+        //self.dataStore.currentUser = [PFUser currentUser];
     }
 }
 
@@ -86,7 +87,7 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
 {
-    self.currentUser = user;
+    //self.dataStore.currentUser = user;
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
@@ -146,61 +147,61 @@
 }
 
 #pragma marks - IB Actions
-- (IBAction)postComment:(id)sender {
-    //run this on a background thread
-    NSOperationQueue *newQueue = [[NSOperationQueue alloc]init];
-    [newQueue addOperationWithBlock:^{
-        // retrieve current user from parse
-        [TMT_API_Calls retrieveCurrentUserWithUserObject:self.currentUser WithCompletion:^(BOOL success) {
-            if (success) {
-                // present share dialog box to user
-                [TMT_API_Calls presentFacebookShareWithUserObject:self.currentUser];
-            }
-        }];
-    }];
-}
-
-- (IBAction)linkTwitter:(id)sender {
-    
-    PFUser *user = [PFUser currentUser];
-    
-    if (![PFTwitterUtils isLinkedWithUser:user]) {
-        [PFTwitterUtils linkUser:user block:^(BOOL succeeded, NSError *error) {
-            if ([PFTwitterUtils isLinkedWithUser:user]) {
-                NSLog(@"Woohoo, user logged in with Twitter!");
-            }
-        }];
-    }
-}
-
-- (IBAction)linkFacebook:(id)sender {
-    PFUser *user = [PFUser currentUser];
-    if (![PFFacebookUtils isLinkedWithUser:user]) {
-        [PFFacebookUtils linkUser:user permissions:nil block:^(BOOL succeeded, NSError *error) {
-            if (succeeded) {
-                NSLog(@"Woohoo, user logged in with Facebook!");
-            }
-        }];
-    }
-}
-
-- (IBAction)unlinkTwitter:(id)sender {
-    PFUser *user = [PFUser currentUser];
-    [PFTwitterUtils unlinkUserInBackground:user block:^(BOOL succeeded, NSError *error) {
-        if (!error && succeeded) {
-            NSLog(@"The user is no longer associated with their Twitter account.");
-        }
-    }];
-}
-
-- (IBAction)unlinkFacebook:(id)sender {
-    PFUser *user = [PFUser currentUser];
-    [PFFacebookUtils unlinkUserInBackground:user block:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"The user is no longer associated with their Facebook account.");
-        }
-    }];
-}
+//- (IBAction)postComment:(id)sender {
+//    //run this on a background thread
+//    NSOperationQueue *newQueue = [[NSOperationQueue alloc]init];
+//    [newQueue addOperationWithBlock:^{
+//        // retrieve current user from parse
+//        [TMT_API_Calls retrieveCurrentUserWithUserObject:self.dataStore.currentUser WithCompletion:^(BOOL success) {
+//            if (success) {
+//                // present share dialog box to user
+//                [TMT_API_Calls presentFacebookShareWithUserObject:self.dataStore.currentUser];
+//            }
+//        }];
+//    }];
+//}
+//
+//- (IBAction)linkTwitter:(id)sender {
+//    
+//    PFUser *user = [PFUser currentUser];
+//    
+//    if (![PFTwitterUtils isLinkedWithUser:user]) {
+//        [PFTwitterUtils linkUser:user block:^(BOOL succeeded, NSError *error) {
+//            if ([PFTwitterUtils isLinkedWithUser:user]) {
+//                NSLog(@"Woohoo, user logged in with Twitter!");
+//            }
+//        }];
+//    }
+//}
+//
+//- (IBAction)linkFacebook:(id)sender {
+//    PFUser *user = [PFUser currentUser];
+//    if (![PFFacebookUtils isLinkedWithUser:user]) {
+//        [PFFacebookUtils linkUser:user permissions:nil block:^(BOOL succeeded, NSError *error) {
+//            if (succeeded) {
+//                NSLog(@"Woohoo, user logged in with Facebook!");
+//            }
+//        }];
+//    }
+//}
+//
+//- (IBAction)unlinkTwitter:(id)sender {
+//    PFUser *user = [PFUser currentUser];
+//    [PFTwitterUtils unlinkUserInBackground:user block:^(BOOL succeeded, NSError *error) {
+//        if (!error && succeeded) {
+//            NSLog(@"The user is no longer associated with their Twitter account.");
+//        }
+//    }];
+//}
+//
+//- (IBAction)unlinkFacebook:(id)sender {
+//    PFUser *user = [PFUser currentUser];
+//    [PFFacebookUtils unlinkUserInBackground:user block:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"The user is no longer associated with their Facebook account.");
+//        }
+//    }];
+//}
 
 - (IBAction)logout:(id)sender {
     [PFUser logOut];

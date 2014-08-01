@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import <FacebookSDK/Facebook.h>
+#import "DogsDataStore.h"
 
 @interface TMTLoginViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
-@property (strong, nonatomic) PFObject *currentUser;
+//@property (strong, nonatomic) PFObject *currentUser;
+
+//@property (strong, nonatomic) DogsDataStore *dataStore;
 
 @end

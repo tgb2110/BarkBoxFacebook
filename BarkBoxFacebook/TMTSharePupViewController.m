@@ -23,16 +23,17 @@
 {
     [super viewDidLoad];
     
+    self.dataStore = [DogsDataStore sharedDataStore];
+    
     self.dogCollectionView.dataSource = self;
     self.dogCollectionView.delegate = self;
-    self.dogs = [NSMutableArray new];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    for (NSInteger i = 1; i < 19; i ++) {
-        TMTDog *dog = [TMTDog new];
-        dog.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", i]];
-        [self.dogs addObject:dog];
-    }
+//    for (NSInteger i = 1; i < 19; i ++) {
+//        TMTDog *dog = [TMTDog new];
+//        dog.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", i]];
+//        [self.dogs addObject:dog];
+//    }
     
 }
 
@@ -51,7 +52,7 @@
 #pragma mark - UICollectionView Datasource
 // 1
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
-    return [self.dogs count];
+    return [self.dataStore.dogs count];
 }
 // 2
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
@@ -63,7 +64,7 @@
     TMTSharePupCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"dogCell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
     
-    TMTDog *dog = self.dogs[indexPath.row];
+    TMTDog *dog = self.dataStore.dogs[indexPath.row];
     cell.dogImage.image = dog.image;
     
     return cell;
@@ -109,10 +110,11 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     NSIndexPath *ip = [self.dogCollectionView indexPathForCell:sender];
-    TMTDog *dog = self.dogs[ip.row];;
+    TMTDog *dog = self.dataStore.dogs[ip.row];;
     TMTDetailDogViewController *nextVC = segue.destinationViewController;
     
     if ([segue.identifier isEqualToString:@"detailDogSegue"]) {
+        nextVC.currentUser = self.dataStore.currentUser;
         nextVC.dog = dog;
     }
 }

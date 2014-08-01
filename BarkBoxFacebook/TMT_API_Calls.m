@@ -28,20 +28,19 @@
     if ([FBDialogs canPresentShareDialogWithParams:params]) {
         [self performSelectorOnMainThread:@selector(postUsingNativeFacebookAppWithUserObject:) withObject:userObject waitUntilDone:YES];
     } else {
-        [self performSelectorOnMainThread:@selector(postNotUsingNativeFacebookAppWithUserObject:) withObject:userObject waitUntilDone:YES];
+        NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                       @"Sharing Tutorial", @"name",
+                                       @"Build great social apps and get more installs.", @"caption",
+                                       @"Allow your users to share stories on Facebook from your app using the iOS SDK.", @"description",
+                                       @"https://developers.facebook.com/docs/ios/share/", @"link",
+                                       @"http://i.imgur.com/g3Qc1HN.png", @"picture",
+                                       nil];
+        [self performSelectorOnMainThread:@selector(postNotUsingNativeFacebookAppWithUserObject:WithParams:) withObject:@[userObject,params] waitUntilDone:YES];
     }
 }
 
-+ (void)postNotUsingNativeFacebookAppWithUserObject:(PFObject *)userObject {
-    // Put together the dialog parameters
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                   @"Sharing Tutorial", @"name",
-                                   @"Build great social apps and get more installs.", @"caption",
-                                   @"Allow your users to share stories on Facebook from your app using the iOS SDK.", @"description",
-                                   @"https://developers.facebook.com/docs/ios/share/", @"link",
-                                   @"http://i.imgur.com/g3Qc1HN.png", @"picture",
-                                   nil];
-    
++ (void)postNotUsingNativeFacebookAppWithUserObject:(PFObject *)userObject WithParams:(NSDictionary *)params {
+
     // Show the feed dialog
     [FBWebDialogs presentFeedDialogModallyWithSession:nil
                                            parameters:params

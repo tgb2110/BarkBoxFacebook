@@ -15,7 +15,7 @@
 
 +(void)presentFacebookShareWithUserObject:(PFObject *)userObject;
 
-+(void)postNotUsingNativeFacebookAppWithUserObject:(PFObject *)userObject;
++(void)postNotUsingNativeFacebookAppWithUserObject:(PFObject *)userObject WithParams:(NSDictionary *)params;
 
 +(void)postUsingNativeFacebookAppWithUserObject:(PFObject *)userObject;
 

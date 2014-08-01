@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DogsDataStore.h"
 
 @interface TMTSharePupViewController : UIViewController
 
-@property (strong, nonatomic) NSMutableArray *dogs;
+//@property (strong, nonatomic) NSMutableArray *dogs;
+
+@property (strong, nonatomic) DogsDataStore *dataStore;
+
+
+
 @end

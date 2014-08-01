@@ -10,11 +10,14 @@
 #import "TMTDog.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/Facebook.h>
+#import "DogsDataStore.h"
 
 @interface TMTDetailDogViewController : UIViewController
 
 @property (strong, nonatomic) TMTDog *dog;
-
 @property (strong, nonatomic) PFObject *currentUser;
+
+//@property (strong, nonatomic) DogsDataStore *dataStore;
+
 
 @end

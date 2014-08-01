@@ -50,7 +50,7 @@
 		3BBDE3BF19892DC700D7C9F0 /* TMTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE3BE19892DC700D7C9F0 /* TMTConstants.m */; };
 		3BBDE3C2198A7FA600D7C9F0 /* TMT_API_Calls.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBDE3C1198A7FA600D7C9F0 /* TMT_API_Calls.m */; };
 		3BC893F6198BFC980094D3C3 /* TMTDetailDogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC893F5198BFC980094D3C3 /* TMTDetailDogViewController.m */; };
-		3BC893F9198C09960094D3C3 /* DogsHardcoded.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC893F8198C09960094D3C3 /* DogsHardcoded.m */; };
+		3BC893F9198C09960094D3C3 /* DogsDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC893F8198C09960094D3C3 /* DogsDataStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,8 +117,8 @@
 		3BBDE3C1198A7FA600D7C9F0 /* TMT_API_Calls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMT_API_Calls.m; sourceTree = "<group>"; };
 		3BC893F4198BFC980094D3C3 /* TMTDetailDogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTDetailDogViewController.h; sourceTree = "<group>"; };
 		3BC893F5198BFC980094D3C3 /* TMTDetailDogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTDetailDogViewController.m; sourceTree = "<group>"; };
-		3BC893F7198C09960094D3C3 /* DogsHardcoded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogsHardcoded.h; sourceTree = "<group>"; };
-		3BC893F8198C09960094D3C3 /* DogsHardcoded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogsHardcoded.m; sourceTree = "<group>"; };
+		3BC893F7198C09960094D3C3 /* DogsDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogsDataStore.h; sourceTree = "<group>"; };
+		3BC893F8198C09960094D3C3 /* DogsDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogsDataStore.m; sourceTree = "<group>"; };
 		87B3BE3FD97B4E74BA856391 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68EAC80440542299098A9A5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,14 +229,14 @@
 				3B23F445198BD5D300252CB0 /* TMTDog.h */,
 				3B23F446198BD5D300252CB0 /* TMTDog.m */,
 				3BBDE395198928B700D7C9F0 /* Main_iPhone.storyboard */,
-				3BC893F7198C09960094D3C3 /* DogsHardcoded.h */,
-				3BC893F8198C09960094D3C3 /* DogsHardcoded.m */,
+				3BC893F7198C09960094D3C3 /* DogsDataStore.h */,
+				3BC893F8198C09960094D3C3 /* DogsDataStore.m */,
 				3B23F44B198BDB0400252CB0 /* TMTSharePupCollectionViewCell.h */,
+				3B23F44C198BDB0400252CB0 /* TMTSharePupCollectionViewCell.m */,
 				3B23F453198BF5C400252CB0 /* TMTSharePupViewController.h */,
 				3B23F454198BF5C400252CB0 /* TMTSharePupViewController.m */,
 				3BC893F4198BFC980094D3C3 /* TMTDetailDogViewController.h */,
 				3BC893F5198BFC980094D3C3 /* TMTDetailDogViewController.m */,
-				3B23F44C198BDB0400252CB0 /* TMTSharePupCollectionViewCell.m */,
 				3BBDE39B198928B700D7C9F0 /* TMTLoginViewController.h */,
 				3BBDE39C198928B700D7C9F0 /* TMTLoginViewController.m */,
 				3BBDE3C0198A7FA600D7C9F0 /* TMT_API_Calls.h */,
@@ -437,7 +437,7 @@
 				3BC893F6198BFC980094D3C3 /* TMTDetailDogViewController.m in Sources */,
 				3B23F44D198BDB0400252CB0 /* TMTSharePupCollectionViewCell.m in Sources */,
 				3BBDE390198928B700D7C9F0 /* main.m in Sources */,
-				3BC893F9198C09960094D3C3 /* DogsHardcoded.m in Sources */,
+				3BC893F9198C09960094D3C3 /* DogsDataStore.m in Sources */,
 				3BBDE3BF19892DC700D7C9F0 /* TMTConstants.m in Sources */,
 				3BBDE3C2198A7FA600D7C9F0 /* TMT_API_Calls.m in Sources */,
 			);
