@@ -43,7 +43,6 @@
     __block double longitude;
     [self.geoCoder geocodeAddressString:self.event.eventLocationName completionHandler:^(NSArray *placemarks, NSError *error) {
         NSLog(@"%@", placemarks);
-        
         if (placemarks.count > 0 && error == nil) {
             NSLog(@"Found %lu placemarks", (unsigned long)[placemarks count]);
             CLPlacemark *thePlacemark = placemarks[0];
@@ -63,8 +62,8 @@
     MKCoordinateRegion region;
     region.center.latitude = location.latitude;
     region.center.longitude = location.longitude;
-    region.span.latitudeDelta = .5;
-    region.span.longitudeDelta = .5;
+    region.span.latitudeDelta = .01;
+    region.span.longitudeDelta = .01;
     
     [self.map setRegion:region animated:YES];
     
