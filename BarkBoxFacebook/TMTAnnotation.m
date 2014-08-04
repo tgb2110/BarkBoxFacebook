@@ -10,8 +10,7 @@
 
 @implementation TMTAnnotation
 
-- (instancetype) initWithCoordinate:(CLLocationCoordinate2D)coord title:(NSString *)title subtitle:(NSString *)subtitle
-{
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coord title:(NSString *)title subtitle:(NSString *)subtitle {
     self = [super init];
     if (self) {
         _coordinate = coord;

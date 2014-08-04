@@ -15,7 +15,6 @@
 
 @property (nonatomic, strong) CLGeocoder *geoCoder;
 
-
 @end
 
 @implementation TMTEventDetailViewController
@@ -40,18 +39,45 @@
     self.geoCoder = [[CLGeocoder alloc] init];
     self.map.delegate = self;
     __block CLLocationCoordinate2D location;
+    __block double latitude = 0;
+    __block double longitude;
     [self.geoCoder geocodeAddressString:self.event.eventLocationName completionHandler:^(NSArray *placemarks, NSError *error) {
+        NSLog(@"%@", placemarks);
+        
         if (placemarks.count > 0 && error == nil) {
             NSLog(@"Found %lu placemarks", (unsigned long)[placemarks count]);
             CLPlacemark *thePlacemark = placemarks[0];
-            location = thePlacemark.location.coordinate;
+            latitude = thePlacemark.location.coordinate.latitude;
+            longitude = thePlacemark.location.coordinate.longitude;
+            location = CLLocationCoordinate2DMake(latitude, longitude);
+            [self updateMapViewWithCLLocationCoordinate2D:location];
+            [self plotLocationPinWithCLLocationCoordinate2D:location];
         }
-//        else if (placemarks.count == 0 && error == nil) {
-//        }
-//        else if (error) {
-//        }
     }];
+
     
+}
+
+- (void)updateMapViewWithCLLocationCoordinate2D:(CLLocationCoordinate2D)location {
+    // create a region and pass it to the Map View
+    MKCoordinateRegion region;
+    region.center.latitude = location.latitude;
+    region.center.longitude = location.longitude;
+    region.span.latitudeDelta = .5;
+    region.span.longitudeDelta = .5;
+    
+    [self.map setRegion:region animated:YES];
+    
+}
+
+- (void)plotLocationPinWithCLLocationCoordinate2D:(CLLocationCoordinate2D)location {
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    double latitudeDouble = location.latitude;
+    double longitudeDouble = location.longitude;
+    point.coordinate = CLLocationCoordinate2DMake(latitudeDouble, longitudeDouble);
+    point.title = self.event.eventName;
+    point.subtitle = self.event.eventLocationName;
+    [self.map addAnnotation:point];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,7 +124,7 @@
             }
         }];
     }];
-
+    
 }
 
 @end
