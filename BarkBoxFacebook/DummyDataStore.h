@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 
-@interface DogsDataStore : NSObject
+@interface DummyDataStore : NSObject
 
 @property (strong, nonatomic) NSMutableArray *dogs;
 @property (strong, nonatomic) PFObject *currentUser;
+@property (strong, nonatomic) NSMutableArray *events;
 
 + (instancetype)sharedDataStore;
 

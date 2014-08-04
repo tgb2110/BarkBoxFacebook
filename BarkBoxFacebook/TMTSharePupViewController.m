@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataStore = [DogsDataStore sharedDataStore];
+    self.dataStore = [DummyDataStore sharedDataStore];
     
     self.dogCollectionView.dataSource = self;
     self.dogCollectionView.delegate = self;

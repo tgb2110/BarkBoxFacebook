@@ -10,7 +10,7 @@
 #import "TMTDog.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/Facebook.h>
-#import "DogsDataStore.h"
+#import "DummyDataStore.h"
 
 @interface TMTDetailDogViewController : UIViewController
 

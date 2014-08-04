@@ -6,13 +6,14 @@
 //  Copyright (c) 2014 TMT. All rights reserved.
 //
 
-#import "DogsDataStore.h"
+#import "DummyDataStore.h"
 #import "TMTDog.h"
+#import "TMTEvent.h"
 
-@implementation DogsDataStore
+@implementation DummyDataStore
 
 + (instancetype)sharedDataStore {
-    static DogsDataStore * sharedDataStore = nil;
+    static DummyDataStore * sharedDataStore = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedDataStore = [[self alloc] init];
@@ -24,6 +25,7 @@
     self = [super init];
     if (self) {
         self.currentUser = [PFUser currentUser];
+        [self makeEvents];
         [self makeDogs];
     }
     return self;
@@ -31,6 +33,7 @@
 
 - (void)makeDogs {
     self.dogs = [NSMutableArray new];
+    
     TMTDog *dogOne = [TMTDog new];
     dogOne.image = [UIImage imageNamed:@"1.jpg"];
     dogOne.name = @"Sugar";
@@ -40,6 +43,7 @@
     dogOne.bio = @"Sugar enjoys walks in the park and strokes on her belly.  Also, peanut butter.";
     dogOne.imageURL = @"http://leapdogtraining.com/images/1.jpg";
     [self.dogs addObject:dogOne];
+    
     TMTDog *dogTwo = [TMTDog new];
     dogTwo.image = [UIImage imageNamed:@"2.jpg"];
     dogTwo.name = @"Leila";
@@ -49,6 +53,7 @@
     dogTwo.bio = @"Leila was once a secret agent for the KGB she's now laying low in the UWS";
     dogTwo.imageURL = @"http://leapdogtraining.com/images/2.jpg";
     [self.dogs addObject:dogTwo];
+    
     TMTDog *dogThree = [TMTDog new];
     dogThree.image = [UIImage imageNamed:@"3.jpg"];
     dogThree.name = @"Sally";
@@ -58,6 +63,7 @@
     dogThree.bio = @"Sally likes walks through McCarren and then Sunday Fundays at Northern Territory";
     dogThree.imageURL = @"http://leapdogtraining.com/images/3.jpg";
     [self.dogs addObject:dogThree];
+    
     TMTDog *dogFour = [TMTDog new];
     dogFour.image = [UIImage imageNamed:@"4.jpg"];
     dogFour.name = @"Reese";
@@ -67,6 +73,7 @@
     dogFour.bio = @"Reese is a ";
     dogFour.imageURL = @"http://leapdogtraining.com/images/4.jpg";
     [self.dogs addObject:dogFour];
+    
     TMTDog *dogFive = [TMTDog new];
     dogFive.image = [UIImage imageNamed:@"5.jpg"];
     dogFive.name = @"Zamia";
@@ -76,6 +83,7 @@
     dogFive.bio = @"former US Customs bomb sniffe";
     dogFive.imageURL = @"http://leapdogtraining.com/images/5.jpg";
     [self.dogs addObject:dogFive];
+    
     TMTDog *dogSix = [TMTDog new];
     dogSix.image = [UIImage imageNamed:@"6.jpg"];
     dogSix.name = @"Frank";
@@ -85,6 +93,7 @@
     dogSix.bio = @"Frank figured life out early. Broke out, hasn't looked back.";
     dogSix.imageURL = @"http://leapdogtraining.com/images/6.jpg";
     [self.dogs addObject:dogSix];
+    
     TMTDog *dogSeven = [TMTDog new];
     dogSeven.image = [UIImage imageNamed:@"7.jpg"];
     dogSeven.name = @"Peppermint Patty";
@@ -94,6 +103,7 @@
     dogSeven.bio = @"Ivy league frat house mascot";
     dogSeven.imageURL = @"http://leapdogtraining.com/images/7.jpg";
     [self.dogs addObject:dogSeven];
+    
     TMTDog *dogEight = [TMTDog new];
     dogEight.image = [UIImage imageNamed:@"8.jpg"];
     dogEight.name = @"Rufus";
@@ -103,6 +113,7 @@
     dogEight.bio = @"Rufus lkes the better parts of life. Fine cigars and an occassional ball throw.";
     dogEight.imageURL = @"http://leapdogtraining.com/images/8.jpg";
     [self.dogs addObject:dogEight];
+    
     TMTDog *dogNine = [TMTDog new];
     dogNine.image = [UIImage imageNamed:@"9.jpg"];
     dogNine.name = @"Monroe";
@@ -112,6 +123,27 @@
     dogNine.bio = @"Monroe, active, loyal, knows how to have a good time. But also knows when to keep calm and carry on.";
     dogNine.imageURL = @"http://leapdogtraining.com/images/9.jpg";
     [self.dogs addObject:dogNine];
+}
+
+- (void)makeEvents {
+    self.events = [NSMutableArray new];
+    TMTEvent *eventOne = [TMTEvent new];
+    eventOne.eventName = @"Doggy Surf Competition";
+    eventOne.eventDate = [NSDate date];
+    eventOne.eventLocationName = @"601 West 110th Street, New York, NY 10025";
+    eventOne.eventDescription = @"Come on out to the annual Doggy Surf Competition hosted by ABD Kennel";
+    eventOne.eventImage = [UIImage imageNamed:@"doggySurf.jpg"];
+    eventOne.imageURL = @"http://www1.pictures.zimbio.com/pc/Surfs+up+pooches+Second+Annual+Surf+City+Surf+e4IfcYSqIoYl.jpg";
+    [self.events addObject:eventOne];
+    
+    TMTEvent *eventTwo = [TMTEvent new];
+    eventTwo.eventName = @"Furry Tails";
+    eventTwo.eventDate = [NSDate date];
+    eventTwo.eventLocationName = @"Newark, NJ";
+    eventTwo.eventDescription = @"Who has the Royal Bark?!";
+    eventTwo.eventImage = [UIImage imageNamed:@"fairyTail.jpg"];
+    eventTwo.imageURL = @"http://bgparks.org/images/event/Dog%205.JPG";
+    [self.events addObject:eventTwo];
 }
 
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import <FacebookSDK/Facebook.h>
-#import "DogsDataStore.h"
+#import "DummyDataStore.h"
 
 @interface TMTLoginViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
